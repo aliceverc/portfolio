@@ -1,4 +1,4 @@
-# Alice Vercelli Portfolio
+# Alice Vercelli - Portfolio
 
 A personal portfolio showcasing my work as a **Digital Graphic & Media Designer** and **junior Frontend Developer**.
 
