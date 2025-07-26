@@ -17,10 +17,6 @@ A personal portfolio showcasing my work as a **Graphic/Web Designer**, and **jun
 * JavaScript (ES6) + jQuery (for Bootstrap)
 * Google Fonts
 
-## License
-
-MIT
-
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/alice-vercelli/) · **[alicevercelli13@gmail.com](mailto:alicevercelli13@gmail.com)**
