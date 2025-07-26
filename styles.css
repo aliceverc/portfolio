@@ -1,0 +1,247 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+#headerCarousel,
+.carousel-item {
+  height: 500px;
+}
+.video-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-hero .overlay {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.video-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.video-hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  z-index: 2;
+}
+
+.video-hero .btn {
+  background-color: #720026;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+.video-hero .btn:hover {
+  background-color: #720026;
+}
+.navbar {
+  background-color: #1b263b !important;
+}
+#linkedin {
+  margin-left: 5px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+body {
+  background-color: #e8ebe4 !important;
+}
+.skills h4 {
+  font-weight: 600;
+}
+.img-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 10px;
+}
+
+.img-thumbnail img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.img-thumbnail:hover img {
+  transform: scale(1.1);
+}
+.mehr {
+  color: #720026 !important;
+  font-weight: 600;
+}
+.social {
+  display: block;
+}
+.social-icon {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 5px;
+}
+.link-white {
+  color: #fff;
+}
+.link-white:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.img-fluid {
+  cursor: pointer;
+}
+#portfolio {
+  background-color: #1b263b !important;
+}
+#portfolio-weiterbildung {
+  color: #fff !important;
+  padding-top: 1em !important;
+}
+#portfolio-ausbildung {
+  color: #1b263b;
+  padding-top: 1em !important;
+}
+.description p {
+  color: #fff;
+  font-weight: 200;
+}
+.description2 p {
+  color: #1b263b;
+  font-weight: 200;
+}
+.bildunterschrift {
+  color: #fff;
+  margin-top: 0.5em;
+  font-weight: 6o0;
+}
+.modal-dialog {
+  max-width: 85%;
+  width: auto;
+}
+.bildunterschrift2 {
+  color: #1b263b !important;
+  margin-top: 0.5em;
+}
+#kontakt {
+  background-color: #e8ebe4 !important;
+  color: #4b4b4b !important;
+}
+.btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.btn-website {
+  background-color: #720026;
+}
+.btn-website a {
+  color: #fff;
+  text-decoration: none;
+}
+.btn:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-senden {
+  background-color: #720026 !important;
+  border-color: #720026 !important;
+}
+.btn-tel {
+  background-color: #720026 !important;
+  border-color: #720026 !important;
+}
+.form-control::placeholder {
+  color: lightgrey;
+}
+#footer {
+  background-color: #1b263b !important;
+}
+.img-overlay-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.img-overlay-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.img-overlay-container:hover img {
+  transform: scale(1.05);
+}
+.img-overlay-container:hover .img-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 990px) {
+  .social {
+    text-align: center;
+  }
+  #linkedin {
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+  .btn-tel {
+    margin-top: 5px;
+  }
+  .connect {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 95%;
+  }
+  .video-hero .btn {
+    font-size: 0.8em;
+  }
+  .video-hero h1 {
+    font-size: 2.5em;
+  }
+}

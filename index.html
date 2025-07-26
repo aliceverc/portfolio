@@ -1,961 +1,2198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
     <!-- Benötigte Meta Tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/29bcee75fa.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/29bcee75fa.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Fontss -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Metrophobic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Metrophobic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-
-    <title>Alice Vercelli - Digital Graphic Designer</title>
-    
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-        #headerCarousel, .carousel-item {
-            height: 500px;
-        }
-        .video-hero {
-            position: relative;
-            height: 100vh; 
-            overflow: hidden;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #bg-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-            z-index: -1; 
-        }
-
-        .video-hero .overlay {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            background-color: rgba(0, 0, 0, 0.5); 
-            z-index: 1;
-        }
-
-        .video-hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            z-index: 2; 
-        }
-
-        .video-hero p {
-            font-size: 1.2rem;
-            margin: 20px 0;
-            z-index: 2;
-        }
-
-        .video-hero .btn {
-            background-color: #720026;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            z-index: 2;
-            transition: background-color 0.3s ease;
-        }
-        .video-hero .btn:hover {
-            background-color: #720026;
-        }
-        .navbar {
-            background-color: #1B263B !important;
-        }
-        #linkedin {
-          margin-left: 5px;
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 500px; 
-            object-fit: contain; 
-        }       
-        body {
-          background-color: #E8EBE4 !important;
-        }
-	.skills h4 {
-	  font-weight: 600;
-	}
-        .img-thumbnail {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden; 
-            width: 100%; 
-            background-color: #f8f9fa; 
-            border: none; 
-            border-radius: 10px;
-        }
-
-        .img-thumbnail img {
-            width: 100%;
-            height: auto; 
-            transition: transform 0.3s ease; 
-        }
-
-        .img-thumbnail:hover img {
-            transform: scale(1.1); 
-        }
-         .mehr{
-          color: #720026 !important;
-          font-weight: 600;
-        }
-        .social {
-          display: block;
-        }
-        .social-icon {
-            max-width: 100px;
-            height: auto;
-            margin-bottom: 5px;
-        }
-        .link-white {
-            color: #fff;
-        }
-        .link-white:hover {
-            color: #fff;
-            text-decoration: none;
-        }
-        .img-fluid {
-            cursor: pointer;
-        }
-        #portfolio {
-          background-color: #1B263B !important;
-        }
-        #portfolio-weiterbildung{
-          color: #fff !important;
-          padding-top: 1em !important;
-        }
-        #portfolio-ausbildung{
-          color: #1B263B;
-          padding-top: 1em !important;
-        }
-       .description p {
-        color: #fff;
-        font-weight: 200;
-       }
-       .description2 p {
-        color: #1B263B;
-        font-weight: 200;
-       }
-        .bildunterschrift {
-          color: #fff;
-          margin-top: 0.5em;
-          font-weight: 6o0;
-        }
-        .modal-dialog {
-        max-width: 85%; 
-        width: auto; 
-        }
-        .bildunterschrift2 {
-          color:  #1B263B!important;
-          margin-top: 0.5em;
-        }
-        #kontakt {
-          background-color: #E8EBE4 !important;
-          color: #4B4B4B !important;
-        }
-        .btn {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-        .btn-website {
-            background-color: #720026;
-        }
-        .btn-website a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .btn:hover {
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-senden {
-          background-color:  #720026 !important;
-          border-color: #720026 !important;;
-        }
-        .btn-tel{
-          background-color:  #720026 !important;
-          border-color: #720026 !important;;
-        }
-        .form-control::placeholder {
-          color: lightgrey;
-        }
-        #footer
-        {
-          background-color: #1B263B!important;
-        }
-
-        @media (max-width: 990px) {
-	.social {
-	  text-align: center;
-        }
-            #linkedin {
-              margin-left: 0px;
-              margin-top: 5px;
-        }
-	.btn-tel{
-          margin-top: 5px;
-        }
-	.connect {
-	  text-align: center;
-	}
-        }
-
-        @media (max-width: 768px) {
-            .modal-dialog {
-            max-width: 95%;
-            }
-            .video-hero .btn {
-              font-size: 0.8em;
-            }
-            .video-hero h1 {
-              font-size: 2.5em;
-            }
-        }
-
-    </style>
+    <title>Alice Vercelli - Graphic Web Designer | Junior Web Developer</title>
   </head>
   <body>
-   
     <!-- Navigationsleiste -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topMenu">
-            <a class="navbar-brand" href="#">Alice Vercelli</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#leistung">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontakt">Contact</a>
-                    </li>
-                    <li id="linkedin" class="nav-item">
-                      <a href="https://www.linkedin.com/in/alice-vercelli/"><img class="img-fluid social-icon" src="img/InW.png" alt=""></a>
-                  </li>
-                </ul>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topMenu">
+      <a class="navbar-brand" href="#">Alice Vercelli</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarMain"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <header class="video-hero">
-            <div class="overlay">
-              <div class="container text-center">
-                <h1>Hi, I'm Alice Vercelli</h1>
-                <p class="lead">Graphic & Media Designer</p>
-                <a href="#portfolio-weiterbildung" class="btn btn-primary btn-lg">Explore My Work</a>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#leistung">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Contact</a>
+          </li>
+          <li id="linkedin" class="nav-item">
+            <a href="https://www.linkedin.com/in/alice-vercelli/"
+              ><img class="img-fluid social-icon" src="img/InW.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="video-hero">
+      <div class="overlay">
+        <div class="container text-center">
+          <h1>Hi, I'm Alice Vercelli</h1>
+          <p class="lead">
+            Graphic Designer, Web Designer & Junior Web Developer
+          </p>
+          <a href="#portfolio-weiterbildung" class="btn btn-primary btn-lg"
+            >Explore My Work</a
+          >
+        </div>
+      </div>
+      <video autoplay muted loop playsinline id="bg-video">
+        <source
+          src="https://videos.pexels.com/video-files/2792370/2792370-hd_1920_1080_30fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </header>
+
+    <!-- Leistungen -->
+    <div class="container my-5 py-5">
+      <div
+        class="row seitenAbschnitt text-center align-items-center"
+        id="leistung"
+      >
+        <div class="col-sm-4 skills">
+          <img src="img/webdesign.png" width="150" height="150" />
+          <h4>Webdesign</h4>
+          <a class="mehr" href="#detailsWebdesign">Read more...</a>
+          <div class="collapse my-2" id="detailsWebdesign">
+            Design and development of
+            <strong>user-friendly websites</strong> tailored to client needs,
+            leveraging WordPress and Bootstrap for responsive layouts and an
+            engaging user experience that prioritizes accessibility and modern
+            design standards.
+          </div>
+        </div>
+        <div class="col-sm-4 skills">
+          <img src="img/logo.png" width="150" height="150" />
+          <h4>Logos & Icons</h4>
+          <a class="mehr" href="#detailsFotografie">Read more...</a>
+          <div class="collapse my-2" id="detailsFotografie">
+            Conceptualization and design of
+            <strong>customized logos and icons</strong> that align with brand
+            identity, combining creativity and precision to deliver visually
+            impactful, memorable designs that ensure clear and effective
+            communication.
+          </div>
+        </div>
+        <div class="col-sm-4 skills">
+          <img src="img/grafik.png" width="150" height="150" />
+          <h4>Graphics and illustrations</h4>
+          <a class="mehr" href="#detailsGrafikbearbeitung">Read more...</a>
+          <div class="collapse my-2" id="detailsGrafikbearbeitung">
+            Creation of <strong>bespoke graphics and illustrations</strong>.
+            Skilled in producing high-quality visuals for various mediums, from
+            infographics to promotional materials, ensuring alignment with brand
+            identity and effective audience engagement.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio-Bootcamp Web Development -->
+    <div class="bg-light" id="portfolio">
+      <div class="container" id="portfolio">
+        <h2 id="portfolio-weiterbildung">
+          <strong>Bootcamp Web Development</strong>
+        </h2>
+        <div class="row pb-5">
+          <div class="col-sm-12 col-md-12 pt-5 description">
+            <div class="img-overlay-container" data-target="#project13Modal">
+              <img
+                src="img/VPC.jpg"
+                alt="Winter"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project13Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">App - Virtual Pet Care</h5>
+            <p>
+              <strong>Skills:</strong> React / Next.js routing & API routes,
+              MongoDB schema design & Mongoose queries (CRUD), SWR for real-time
+              data and optimistic UI, styled-components for responsive and
+              mobile-first design, Form validation (max-length, required
+              character tag), UX patterns (confirmation dialogs, empty-state
+              messaging, centred fixed-width layout), Git feature-branch
+              workflow & Pull Requests
+            </p>
+            <br />
+            <button type="button" class="btn btn-secondary btn-website">
+              <a href="https://virtual-pet-care.vercel.app/" target="_blank"
+                >Go to App</a
+              >
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project13Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project13ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project13ModalLabel">
+                    Virtual Pet Care (Pocket Pets)
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <strong>Virtual Pet Care</strong> is a mobile-first web app
+                  where users adopt colourful digital pets, watch their needs
+                  change in real time, and interact with them through feeding,
+                  sleeping and playing. Each pet has its own character
+                  (balanced, gourmet, relaxed, playful) that sets default hunger
+                  / energy / entertainment levels and influences how fast those
+                  needs decay.<br /><br />
+                  <strong>Design Concept:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Phone-Sized Focus:</strong> The entire interface
+                      lives in a centred 375 px-wide column on larger screens,
+                      mimicking a native-app feel and ensuring comfortable thumb
+                      reach on mobile.
+                    </li>
+                    <li>
+                      <strong>Card-Based Pet Gallery:</strong> Each pet appears
+                      as a tidy card with a live emoji happiness indicator,
+                      name, and a dynamic avatar built from colour, shape and
+                      border attributes—instantly recognisable at a glance.
+                    </li>
+                    <li>
+                      <strong>Playful Colour Accents:</strong> Soft pastels for
+                      backgrounds and bright accent colours for hunger, energy
+                      and entertainment bars reinforce a fun, game-like mood
+                      without overwhelming the user.
+                    </li>
+                    <li>
+                      <strong>Need Bars & Emoji Feedback:</strong> Animated fill
+                      bars and a three-state emoji (happy 😄, neutral 😐, sad
+                      😢) give immediate visual feedback on a pet’s well-being.
+                    </li>
+                    <li>
+                      <strong>Minimal Top Nav:</strong> A simple logo-button in
+                      the top-left corner returns users to the pet list from any
+                      page, maintaining a clean, clutter-free header.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Key Features:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Create, Edit & Release Pets: </strong>
+                      <ul>
+                        <li>
+                          Add a new pet with name (max 15 chars), character tag
+                          and visual tweaks, Edit existing pets; character
+                          changes instantly re-seed default needs.
+                        </li>
+                        <li>
+                          Edit existing pets; character changes instantly
+                          re-seed default needs.
+                        </li>
+                        <li>
+                          Release (delete) pets with an “Are you sure?”
+                          dialog—or automatically when all needs hit zero.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Character-Based Defaults:</strong>Four personality
+                      tags prefill needs and affect decay — e.g. playful pets
+                      lose entertainment faster than relaxed pets.
+                    </li>
+                    <li>
+                      <strong>Real-Time Interaction Buttons:</strong>“Eat,”
+                      “Sleep,” “Play” adjust needs immediately with a quick
+                      bar-flash animation; buttons disable while an update is in
+                      flight.
+                    </li>
+                    <li>
+                      <strong>Automatic Need Decay: </strong>A background timer
+                      (or revalidation on page load) decreases needs; full
+                      depletion triggers silent removal from the DB.
+                    </li>
+                    <li>
+                      <strong>Responsive, Touch-Friendly Layout:</strong>
+                      Thumb-sized buttons, single-column flow, and generous
+                      spacing ensure comfortable use on any phone.
+                    </li>
+                    <li>
+                      <strong>Empty-State Messaging:</strong> When all pets are
+                      gone, the list view shows “You have no pets yet” plus a
+                      friendly “Add a new Pet” call-to-action.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Technical Execution:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Next.js 14 + React 18:</strong> CSR pages with
+                      /api routes for CRUD operations.
+                    </li>
+                    <li>
+                      <strong>MongoDB Atlas + Mongoose:</strong> Schema stores
+                      appearance, character and needs; findByIdAndUpdate &
+                      findByIdAndDelete power edit / release workflows.
+                    </li>
+                    <li>
+                      <strong>SWR Data Fetching & Cache:</strong> Automatic
+                      revalidation after updates; mutate() ensures UI reflects
+                      the latest DB state.
+                    </li>
+                    <li>
+                      <strong>styled-components:</strong> Encapsulated styling,
+                      easy theming and conditional flash animations on need
+                      bars.
+                    </li>
+                    <li>
+                      <strong>Mobile-First Layout:</strong> Global container
+                      max-width: 375px; margin: 0 auto; keeps the UI consistent
+                      across viewports.
+                    </li>
+                    <li>
+                      <strong>Fast Feedback Loops:</strong> fetch + optimistic
+                      UI updates; no page reloads.
+                    </li>
+                    <li>
+                      <strong>Clean Code & Modularity:</strong> Dedicated
+                      components for PetCard, PetDisplay, NeedsBar,
+                      PetHappiness, Logo, etc., each with clear props and
+                      responsibilities.
+                    </li>
+                  </ul>
+                  <br /><br />
+                  <strong>Skills:</strong> React / Next.js routing & API routes,
+                  MongoDB schema design & Mongoose queries (CRUD), SWR for
+                  real-time data and optimistic UI, styled-components for
+                  responsive and mobile-first design, Form validation
+                  (max-length, required character tag), UX patterns
+                  (confirmation dialogs, empty-state messaging, centred
+                  fixed-width layout), Git feature-branch workflow & Pull
+                  Requests
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-website">
+                      <a
+                        href="https://virtual-pet-care.vercel.app/"
+                        target="_blank"
+                        >Go to App</a
+                      >
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <video autoplay muted loop playsinline id="bg-video">
-              <source src="https://videos.pexels.com/video-files/2792370/2792370-hd_1920_1080_30fps.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-        </header>
- 
-    <!-- Leistungen -->    
-       <div class="container my-5 py-5">
-           <div class="row seitenAbschnitt text-center align-items-center" id="leistung">
-                <div class="col-sm-4 skills">
-                        <img src="img/webdesign.png" width="150" height="150">
-                    <h4>Webdesign</h4>
-                    <a class="mehr" data-toggle="collapse" href="#detailsWebdesign" role="button" aria-expanded="false" aria-controls="detailsWebdesign">Learn more...</a>
-                    <div class="collapse my-2" id="detailsWebdesign">
-                      Design and development of <strong>user-friendly websites</strong> tailored to client needs, leveraging WordPress and Bootstrap for responsive layouts and an engaging user experience that prioritizes accessibility and modern design standards.
-                    </div>
-                </div>   
-                <div class="col-sm-4 skills">
-                  <img src="img/logo.png" width="150" height="150">
-                   <h4>Logos & Icons</h4>
-                    <a class="mehr" data-toggle="collapse" href="#detailsFotografie" role="button" aria-expanded="false" aria-controls="detailsFotografie">Learn more...</a>
-                    <div class="collapse my-2" id="detailsFotografie">
-                      Conceptualization and design of <strong>customized logos and icons</strong> that align with brand identity, combining creativity and precision to deliver visually impactful, memorable designs that ensure clear and effective communication.
-                    </div>
-                </div>
-                <div class="col-sm-4 skills">
-                    <img src="img/grafik.png" width="150" height="150">
-                    <h4>Graphics and illustrations</h4>
-                    <a class="mehr" data-toggle="collapse" href="#detailsGrafikbearbeitung" role="button" aria-expanded="false" aria-controls="detailsGrafikbearbeitung">Learn more...</a>
-                    <div class="collapse my-2" id="detailsGrafikbearbeitung">
-                      Creation of <strong>bespoke graphics and illustrations</strong>. Skilled in producing high-quality visuals for various mediums, from infographics to promotional materials, ensuring alignment with brand identity and effective audience engagement.
-                    </div>
-                </div>  
-           </div>
+          </div>
+        </div>
       </div>
-        
-       <!-- Portfolio-Ausbildung --> 
-         <div class="bg-light" id="portfolio">
-             <div class="container" id="portfolio">
-            <h2 id="portfolio-weiterbildung"><strong>Media designer apprenticeship (Ausbildung als Mediengestalterin)</strong></h2>
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 pt-5 description">
-                        <img src="img/schuhmanufaktur.jpg" alt="Wald" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project1Modal">
-                        <h5 class="bildunterschrift">Schuhmanufaktur Formschön Website</h5>
-                        <p><strong>Skills:</strong> HTML5, CSS3, JavaScript, Bootstrap, responsive design, typography selection, Adobe Illustrator, Photoshop, Figma, UI/UX principles and graphic design.</p><br>
-                        <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Schuhmanufaktur/Schuhmanufaktur/" target="_blank">Go to Website</a></button>                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project1Modal" tabindex="-1" role="dialog" aria-labelledby="project1ModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="project1ModalLabel">Schuhmanufaktur Formschön Website</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              Developed a responsive website for the luxury handcrafted shoe manufacturer, Schuhmanufaktur Formschön, targeting a sophisticated audience that values high-quality, bespoke products. The project aimed to convey elegance and craftsmanship through design, typography, and a harmonious color scheme.
-                            <br><br>
-                            <strong>Design Approach:</strong> Created a modern, dynamic layout using a dark background paired with gold and white accents to establish a refined aesthetic. Incorporated varying section widths to add visual interest.
-                            <br><br>
-                            <strong>Typography:</strong> Utilized “Great Vibes” for headings to emphasize elegance and “Dosis” for body text, ensuring readability and a contemporary feel.
-                            <br><br>
-                            <strong>Functionality:</strong> Implemented multiple sliders (image, chronology, reviews, and care tips) to enhance user engagement and simplify navigation.
-                            <br><br>
-                            <strong>One-Page Design:</strong> Streamlined content delivery by organizing all sections on a single page, allowing users to access information without navigating through multiple pages.
-                            <br><br>
-                            <strong>Responsiveness:</strong> Optimized for smartphones, tablets, and desktops, ensuring seamless usability across devices.
-                            <br><br>
-                            <strong>Challenges and Solutions:</strong>
-                            <br>
-                            <ul>
-                              <li>Crafted custom icons to reflect the brand’s identity, balancing creativity with professionalism.</li>
-                              <li>Addressed readability and accessibility concerns by refining text hierarchy and color contrast.</li>
-                              <li>Streamlined navigation with a collapsible hamburger menu for smaller viewports.</li>
-                            </ul>
-                            <br>
-                            <strong>Skills:</strong> HTML5, CSS3, JavaScript, Bootstrap, Adobe Illustrator, Photoshop, Adobe XD, responsive design, typography selection, UI/UX principle and graphic design.
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Schuhmanufaktur/Schuhmanufaktur/" target="_blank">Go to Website</a></button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-md-6 pt-5 description">
-                        <img src="img/Aerztehaus.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project2Modal">
-                        <h5 class="bildunterschrift">Ärztehaus am Hirschgarten Website</h5>
-                        <p><strong>Skills:</strong> HTML5, CSS3, responsive design, JavaScript, Adobe Illustrator, Photoshop, Adobe XD, UI/UX principles, graphic design and typography selection.</p><br>
-                        <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Vercelli_Onepager/" target="_blank">Go to Website</a></button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project2Modal" tabindex="-1" role="dialog" aria-labelledby="project2ModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="project2ModalLabel">Ärztehaus am Hirschgarten Website</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              Developed a modern and responsive one-page website for the Ärztehaus am Hirschgarten, a multi-disciplinary medical center in Munich. The website was designed to reflect professionalism and accessibility, providing patients with essential information and seamless navigation across devices.
-                            <br><br>
-                            <strong>Design Approach:</strong> Implemented a clean and structured layout using a professional color palette inspired by the Ärztehaus branding. Designed intuitive navigation to ensure easy access to sections such as services, contact details, and practitioner profiles.
-                            <br><br>
-                            <strong>Typography and Imagery:</strong> Selected legible sans-serif fonts to maintain a clean and modern aesthetic. Integrated high-quality, context-relevant imagery to enhance user engagement and provide visual representation of the facility and its specialties.
-                            <br><br>
-                            <strong>Features and Functionality:</strong> 
-                            <br>
-                            <ul>
-                              <li>Included a floating "Infobox Ärztehaus" visible only on larger screens for quick access to important information.</li>
-                              <li>Developed collapsible navigation optimized for various viewports, ensuring consistent user experience across smartphones, tablets, and desktops.</li>
-                              <li>Integrated a custom 3D floor plan of the medical facility to help users navigate the space easily.</li>
-                            </ul>
-                            <br>
-                            <strong>Challenges and Solutions:</strong>
-                            <br>
-                            <ul>
-                              <li>Ensured seamless responsiveness with optimized breakpoints for viewports ≥1024px and ≥1920px.</li>
-                              <li>Addressed the technical challenge of integrating the 3D floor plan by customizing SVG elements to match the site's design.</li>
-                              <li>Enhanced accessibility by incorporating clear hierarchy, proper alt text for images, and mobile-friendly interactions.</li>
-                            </ul>
-                            <br>
-                            <strong>Skills:</strong> HTML5, CSS3, responsive design, JavaScript, Adobe Illustrator, Photoshop, Adobe XD, UI/UX principles, graphic design and typography selection.
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Vercelli_Onepager/" target="_blank">Go to Website</a></button>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pb-5">
-                    <div class="col-sm-6 col-md-6 pt-5 description">
-                        <img src="img/Waldtrithlon.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project3Modal">
-                        <h5 class="bildunterschrift">Waldtriathlon Microsite</h5>
-                        <p><strong>Skills:</strong> Adobe Illustrator, Photoshop, Adobe XD, Bootstrap, HTML5, CSS3, JavaScript, responsive design principles and UX/UI best practices.</p><br>
-                       <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Waldtriathlon/Waldtrithlon/" target="_blank">Go to Website</a></button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project3Modal" tabindex="-1" role="dialog" aria-labelledby="project3ModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="project3ModalLabel">Waldtriathlon Microsite</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              Developed a visually engaging and intuitive microsite for the Waldtriathlon event, designed to encapsulate the energy, emotion, and atmosphere of the triathlon while ensuring user-friendliness and ease of navigation.
-                            <br><br>
-                            <strong>Design Approach:</strong> Adopted a clear and user-focused layout emphasizing whitespace to provide a breathable, modern aesthetic. Visual separation of the triathlon's three disciplines—cycling, running, and swimming—was achieved through distinct sections and imagery.
-                            <br><br>
-                            <strong>Typography and Color Scheme:</strong> Utilized "Roboto Condensed" for headings to convey modernity and dynamism, complemented by "Lato" for body text for readability. The color palette balanced calming dark blue with energetic accents of mahogany orange, scarlet red, and green for route differentiation.
-                            <br><br>
-                            <strong>Interactive Features:</strong> Implemented a custom slider showcasing images of triathlon moments, allowing users to explore the event's highlights dynamically. A parallax effect was added to enhance the immersive experience, paired with an intuitive "back-to-top" button for seamless navigation.
-                            <br><br>
-                            <strong>Icons & Graphics:</strong> Created bespoke icons inspired by Flaticon and Adobe Stock to represent the triathlon disciplines and map routes, ensuring consistency and clarity. Icons featured elegant lines and dynamic shapes to evoke movement and agility.
-                            <br><br>
-                            <strong>Responsiveness:</strong> Optimized for desktop and mobile devices with responsive typography, adaptable layouts, and interactive maps for each route, ensuring a cohesive user experience across all viewports.
-                            <br><br>
-                            <strong>Skills:</strong> Adobe Illustrator, Photoshop, Adobe XD, Bootstrap, HTML5, CSS3, JavaScript, responsive design principles and UX/UI best practices.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-secondary btn-website"><a href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Waldtriathlon/Waldtrithlon/" target="_blank">Go to Website</a></button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-6 pt-5 description">
-                        <img src="img/sauerland.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project4Modal">
-                        <h5 class="bildunterschrift">Ballonteam Sauerland Website</h5>
-                        <p><strong>Skills:</strong> HTML5, CSS3, JavaScript, responsive web design, Illustrator, Photoshop, Adobe XD, UI/UX principles and client-oriented content structuring.</p>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project4Modal" tabindex="-1" role="dialog" aria-labelledby="project4ModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="project4ModalLabel">Ballonteam Sauerland Website</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              Designed and developed a visually engaging and informative microsite for Ballonteam Sauerland, a company specializing in unique hot air balloon experiences. The project aimed to captivate adventurous customers and provide clear, concise information about services, packages, and scheduling options.
-                            <br><br>
-                            <strong>Design Approach:</strong> The layout incorporated vibrant imagery and a clean, spacious design to evoke the exhilaration and serenity of hot air balloon rides. Emphasis was placed on user-centric navigation and accessibility to ensure a seamless browsing experience.
-                            <br><br>
-                            <strong>Typography:</strong> Utilized a modern sans-serif font for body text to ensure readability and paired it with bold headings to highlight key sections and draw attention to calls-to-action.
-                            <br><br>
-                            <strong>Functionality:</strong> 
-                            <br>
-                            <ul>
-                              <li>Structured the site as a one-pager, simplifying navigation and maintaining a user-friendly experience.</li>
-                              <li>Developed interactive booking forms with integrated fields for user details, preferred dates, and custom notes.</li>
-                              <li>Included a dynamic section for package highlights, providing clear pricing and service descriptions.</li>
-                            </ul>
-                            <br>
-                            <strong>Responsiveness:</strong> Ensured compatibility across devices by creating separate designs for desktop, tablet, and mobile, prioritizing usability and visual harmony. Optimized image scaling and button placement for smaller screens.
-                            <br><br>
-                            <strong>Challenges and Solutions:</strong>
-                            <br>
-                            <ul>
-                              <li><strong>Conveying Adventure and Elegance:</strong> Balanced a professional aesthetic with elements of excitement through the strategic use of images and color schemes.</li>
-                              <li><strong>Encouraging User Interaction:</strong>Designed engaging call-to-action buttons and intuitive forms to enhance user engagement and facilitate booking.</li>
-                              <li><strong>Multi-Device Optimization:</strong>Addressed unique layout challenges for smaller devices using adaptive design techniques, ensuring consistent quality across all platforms.</li>
-                            </ul>
-                            <br>
-                            <strong>Skills:</strong> HTML5, CSS3, JavaScript, responsive web design, UI/UX principles and client-oriented content structuring.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+    </div>
+
+    <!-- Portfolio-BEST OF Magazin -->
+    <div class="bg-light" id="portfolio2">
+      <div class="container" id="portfolio2">
+        <h2 id="portfolio-ausbildung">
+          <strong>WordPress Project - BEST OF Magazin</strong>
+        </h2>
+        <div class="row pb-5">
+          <div class="col-sm-12 col-md-12 pt-5 description2">
+            <div class="img-overlay-container" data-target="#project12Modal">
+              <img
+                src="img/WP_website.jpg"
+                alt="Winter"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project12Modal"
+              />
+              <div class="img-overlay">Read more</div>
             </div>
-            <div class="row pb-5">
-                <div class="col-sm-6 col-md-6 pt-5 description">
-                    <img src="img/Confetti.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project5Modal">
-                    <h5 class="bildunterschrift">Confetti’s 50th Anniversary Landingpage</h5>
-                    <p><strong>Skills:</strong> HTML5, CSS3, responsive design, Illustrator, Photoshop, Adobe XD, UI/UX principles, brand alignment and form development.</p>
+            <h5 class="bildunterschrift2">BEST OF Magazin digital magazine</h5>
+            <p>
+              <strong>Skills:</strong> WordPress & Theme Development (child
+              theme, template hierarchy), UI/UX Design & Layout (hero slider,
+              navigation structure, readability), Responsive & Mobile‑First
+              Front-End, Rich Media Integration (images, video, event
+              galleries), On‑Page SEO & Technical Tuning
+            </p>
+            <br />
+            <button type="button" class="btn btn-secondary btn-website">
+              <a href="https://www.best-of-magazin.com/" target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project12Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project12ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project12ModalLabel">
+                    BEST OF Magazin
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project5Modal" tabindex="-1" role="dialog" aria-labelledby="project5ModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="project5ModalLabel">Confetti’s 50th Anniversary Landingpage</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          Celebrating the legacy of Confetti’s 50th anniversary, this landingpage was designed to capture the elegance and heritage of the brand while providing a streamlined user experience for event registration.
-                        <br><br>
-                        <strong>Design Approach:</strong> The design adhered to strict branding guidelines, utilizing the company’s logo colors exclusively to ensure consistency and recognition. All imagery was converted to black and white, emphasizing a classic and timeless aesthetic while allowing the content to stand out.
-                        <br><br>
-                        <strong>Layout & Features:</strong> The single-page layout was meticulously planned to balance visual appeal and functionality. Key sections included a detailed event overview and an intuitive, responsive registration form.
-                        <br><br>
-                        <strong>Typography:</strong> Carefully selected fonts conveyed professionalism and celebration, complementing the clean design.
-                        <br><br>
-                        <strong>Challenges and Solutions:</strong>
-                        <br>
-                        <ul>
-                          <li><strong>Branding Constraints:</strong> Successfully incorporated limited color options and monochrome imagery without compromising visual interest or clarity.</li>
-                          <li><strong>Engagement:</strong> Developed a user-friendly form to maximize registrations while ensuring data validation and security.</li>
-                          <li><strong>Multi-Device Optimization:</strong> Addressed unique layout challenges for smaller devices using adaptive design techniques, ensuring consistent quality across all platforms.</li>
-                        </ul>
-                        <br>
-                        <strong>Skills:</strong> HTML5, CSS3, responsive design, Illustrator, Photoshop, Adobe XD, UI/UX principles, brand alignment and form development.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
+                <div class="modal-body">
+                  <strong>BEST OF Magazin</strong> is a digital lifestyle
+                  magazine for the euregio Maas-Rhein region (Aachen,
+                  Maastricht, Eupen, Liège and Hasselt). It offers a curated mix
+                  of high-quality articles on lifestyle, leisure, business,
+                  science, events and health. The aim was to create an elegant
+                  online platform with eye-catching visual content and a
+                  regional focus. <br /><br />
+                  <strong>Design Concept:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Atmospheric Header Slider:</strong> A full-screen
+                      hero slider features high-end events like the
+                      Kurpark-Classix in Aachen, complete with image-in-image
+                      animations and elegant overlay text for instant visual
+                      impact.
+                    </li>
+                    <li>
+                      <strong>Luxurious Color Palette:</strong> A deep black
+                      background combined with soft gold accents creates a
+                      premium look and contrast-rich elegance, reminiscent of
+                      upscale print magazines.
+                    </li>
+                    <li>
+                      <strong>Typography:</strong> Bold, serif headlines deliver
+                      strong presence, while clean, readable body text ensures a
+                      pleasant and sophisticated reading experience.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Key Features:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Regional Top-Level Navigation: </strong> Clearly
+                      defined menus—Lifestyle, Leisure, Events, Business,
+                      Science, Health—offer quick access to key categories.
+                    </li>
+                    <li>
+                      <strong>Hero Slider Featuring Major Stories:</strong>
+                      Dynamic, large-image presentations of featured events,
+                      each with a “Learn More” button to boost engagement.
+                    </li>
+                    <li>
+                      <strong>Horizontal Region Pages:</strong> On desktop, each
+                      region (Aachen, Maastricht, Eupen, Liège and Hasselt) uses
+                      a sleek, horizontal layout with fast scrolling. Users can
+                      scroll from left to right through full-width panels
+                      featuring an icon displaying the region's real-time
+                      weather, a stylised map indicating its location, and
+                      images accompanied by headlines of interesting articles,
+                      providing an engaging, magazine-style experience.
+                    </li>
+                    <li>
+                      <strong>Typographic Hierarchies & White Space: </strong>
+                      Thoughtful typographic layering supports visual clarity,
+                      while ample spacing creates a relaxed reading flow.
+                    </li>
+                    <li>
+                      <strong>Newsletter Promotion:</strong> Strategically
+                      placed below the brand header—subtle, consistent, and
+                      aimed at growing subscriber numbers.
+                    </li>
+                    <li>
+                      <strong>Rich Media Integration:</strong> Feature articles
+                      support embedded photo galleries, videos, and multimedia
+                      slideshows—perfect for event and lifestyle storytelling.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Technical Execution:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Professional WordPress Setup:</strong> Custom
+                      theme based on a purpose-built child theme—flexible,
+                      maintainable, and future-proof.
+                    </li>
+                    <li>
+                      <strong>Responsive-First Design:</strong> A fully fluid
+                      layout from desktop to mobile, with optimized headlines,
+                      buttons, and mobile hero sliders.
+                    </li>
+                    <li>
+                      <strong>SEO & Performance Optimization:</strong> Semantic
+                      HTML structure, fast load times via image compression and
+                      caching, and mobile-first design for strong local search
+                      performance.
+                    </li>
+                    <li>
+                      <strong>Clean Code & Maintainability:</strong> Modular
+                      structure with well-commented PHP templates and partials,
+                      ready to scale across additional regions or topics.
+                    </li>
+                  </ul>
+                  <br /><br />
+                  <strong>Skills:</strong> WordPress & Theme Development (child
+                  theme, template hierarchy), UI/UX Design & Layout (hero
+                  slider, navigation structure, readability), Responsive &
+                  Mobile‑First Front-End, Rich Media Integration (images, video,
+                  event galleries), On‑Page SEO & Technical Tuning
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-website">
+                      <a href="https://www.best-of-magazin.com/" target="_blank"
+                        >Go to Website</a
+                      >
+                    </button>
                   </div>
-                  <div class="col-sm-6 col-md-6 pt-5 description">
-                    <img src="img/yoga-flyer.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project6Modal">
-                    <h5 class="bildunterschrift">Yoga Flyer Redesign</h5>
-                    <p><strong>Skills:</strong> Illustrator, InDesign, typography (micro and macro), colour theory and use of white space.</p>
                 </div>
-                <!-- Modal -->
-                <div class="modal fade" id="project6Modal" tabindex="-1" role="dialog" aria-labelledby="project6ModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="project6ModalLabel">Print Product - Redesign</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          For this project, the objective was to redesign a newspaper flyer for a yoga studio, adhering to specific typographic and layout guidelines. The task emphasized improving microtypography and visual hierarchy while maintaining the original dimensions of 136 mm x 100 mm, adaptable to either portrait or landscape format.
-                        <br><br>
-                        <strong>Design Approach:</strong> 
-                        <br>
-                        <ul>
-                          <li><strong>Logo Recreation and Enhancement:</strong> The yoga studio's logo was meticulously recreated with minor refinements to improve visual appeal and ensure better integration within the flyer layout.</li>
-                          <li><strong>Typography and Microtypography:</strong> Focused on optimizing font sizes, spacing, and alignment for enhanced readability. Hierarchical text elements were established to guide the reader’s eye through the key information, such as free trial sessions and the yoga class schedule.</li>
-                          <li><strong>Visual Enhancements:</strong> Selected calming and professional imagery to complement the yoga theme, aligning with the flyer’s overall aesthetic and improving its appeal to potential participants.</li>
-                          <li><strong>Color Palette:</strong> Opted for a balanced and soothing color scheme that resonates with the themes of relaxation and well-being associated with yoga.</li>
-                        </ul>
-                        <br>
-                        <strong>Constraints and Challenges:</strong>
-                        <br>
-                        <ul>
-                          <li>The flyer had to be designed for newspaper print in CMYK mode, requiring careful attention to color contrast and legibility.</li>
-                          <li>The layout had to balance textual content and visual elements within the constrained dimensions, ensuring an uncluttered, professional appearance.</li>
-                          <li>Achieving a consistent and harmonious design while adhering to the provided manuscript text was essential.</li>
-                        </ul>
-                        <br>
-                        <strong>Outcome:</strong> The redesigned flyer achieved a clean, professional look that effectively communicates the studio’s offerings while being visually appealing to the target audience. Key information, such as the schedule and contact details, was highlighted through strategic use of typography and layout. The result was a functional and aesthetic flyer ready for newspaper publication.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio-Ausbildung -->
+    <div class="bg-light" id="portfolio">
+      <div class="container" id="portfolio">
+        <h2 id="portfolio-weiterbildung">
+          <strong
+            >Media designer apprenticeship (Ausbildung als
+            Mediengestalterin)</strong
+          >
+        </h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project1Modal">
+              <img
+                src="img/schuhmanufaktur.jpg"
+                alt="Wald"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project1Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">Schuhmanufaktur Formschön Website</h5>
+            <p>
+              <strong>Skills:</strong> HTML5, CSS3, JavaScript, Bootstrap,
+              responsive design, typography selection, Adobe Illustrator,
+              Photoshop, Figma, UI/UX principles and graphic design.
+            </p>
+            <br />
+            <button type="button" class="btn btn-secondary btn-website">
+              <a
+                href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Schuhmanufaktur/Schuhmanufaktur/"
+                target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project1Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project1ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project1ModalLabel">
+                    Schuhmanufaktur Formschön Website
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Developed a responsive website for the luxury handcrafted shoe
+                  manufacturer, Schuhmanufaktur Formschön, targeting a
+                  sophisticated audience that values high-quality, bespoke
+                  products. The project aimed to convey elegance and
+                  craftsmanship through design, typography, and a harmonious
+                  color scheme.
+                  <br /><br />
+                  <strong>Design Approach:</strong> Created a modern, dynamic
+                  layout using a dark background paired with gold and white
+                  accents to establish a refined aesthetic. Incorporated varying
+                  section widths to add visual interest. <br /><br />
+                  <strong>Typography:</strong> Utilized “Great Vibes” for
+                  headings to emphasize elegance and “Dosis” for body text,
+                  ensuring readability and a contemporary feel. <br /><br />
+                  <strong>Functionality:</strong> Implemented multiple sliders
+                  (image, chronology, reviews, and care tips) to enhance user
+                  engagement and simplify navigation. <br /><br />
+                  <strong>One-Page Design:</strong> Streamlined content delivery
+                  by organizing all sections on a single page, allowing users to
+                  access information without navigating through multiple pages.
+                  <br /><br />
+                  <strong>Responsiveness:</strong> Optimized for smartphones,
+                  tablets, and desktops, ensuring seamless usability across
+                  devices. <br /><br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Crafted custom icons to reflect the brand’s identity,
+                      balancing creativity with professionalism.
+                    </li>
+                    <li>
+                      Addressed readability and accessibility concerns by
+                      refining text hierarchy and color contrast.
+                    </li>
+                    <li>
+                      Streamlined navigation with a collapsible hamburger menu
+                      for smaller viewports.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> HTML5, CSS3, JavaScript, Bootstrap,
+                  Adobe Illustrator, Photoshop, Adobe XD, responsive design,
+                  typography selection, UI/UX principle and graphic design.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-website">
+                    <a
+                      href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Schuhmanufaktur/Schuhmanufaktur/"
+                      target="_blank"
+                      >Go to Website</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project2Modal">
+              <img
+                src="img/Aerztehaus.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project2Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">Ärztehaus am Hirschgarten Website</h5>
+            <p>
+              <strong>Skills:</strong> HTML5, CSS3, responsive design,
+              JavaScript, Adobe Illustrator, Photoshop, Adobe XD, UI/UX
+              principles, graphic design and typography selection.
+            </p>
+            <br />
+            <button type="button" class="btn btn-secondary btn-website">
+              <a
+                href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Vercelli_Onepager/"
+                target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project2Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project2ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project2ModalLabel">
+                    Ärztehaus am Hirschgarten Website
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Developed a modern and responsive one-page website for the
+                  Ärztehaus am Hirschgarten, a multi-disciplinary medical center
+                  in Munich. The website was designed to reflect professionalism
+                  and accessibility, providing patients with essential
+                  information and seamless navigation across devices.
+                  <br /><br />
+                  <strong>Design Approach:</strong> Implemented a clean and
+                  structured layout using a professional color palette inspired
+                  by the Ärztehaus branding. Designed intuitive navigation to
+                  ensure easy access to sections such as services, contact
+                  details, and practitioner profiles. <br /><br />
+                  <strong>Typography and Imagery:</strong> Selected legible
+                  sans-serif fonts to maintain a clean and modern aesthetic.
+                  Integrated high-quality, context-relevant imagery to enhance
+                  user engagement and provide visual representation of the
+                  facility and its specialties. <br /><br />
+                  <strong>Features and Functionality:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Included a floating "Infobox Ärztehaus" visible only on
+                      larger screens for quick access to important information.
+                    </li>
+                    <li>
+                      Developed collapsible navigation optimized for various
+                      viewports, ensuring consistent user experience across
+                      smartphones, tablets, and desktops.
+                    </li>
+                    <li>
+                      Integrated a custom 3D floor plan of the medical facility
+                      to help users navigate the space easily.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Ensured seamless responsiveness with optimized breakpoints
+                      for viewports ≥1024px and ≥1920px.
+                    </li>
+                    <li>
+                      Addressed the technical challenge of integrating the 3D
+                      floor plan by customizing SVG elements to match the site's
+                      design.
+                    </li>
+                    <li>
+                      Enhanced accessibility by incorporating clear hierarchy,
+                      proper alt text for images, and mobile-friendly
+                      interactions.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> HTML5, CSS3, responsive design,
+                  JavaScript, Adobe Illustrator, Photoshop, Adobe XD, UI/UX
+                  principles, graphic design and typography selection.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-website">
+                    <a
+                      href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Vercelli_Onepager/"
+                      target="_blank"
+                      >Go to Website</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="row pb-5">
-            <div class="col-sm-6 col-md-6 pt-5 description">
-                <img src="img/plakat.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project7Modal">
-                <h5 class="bildunterschrift">French Renaissance Antiqua Typography Poster</h5>
-                <p><strong>Skills:</strong> Typography, visual communication, information design, layout composition and historical research.</p>
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project3Modal">
+              <img
+                src="img/Waldtrithlon.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project3Modal"
+              />
+              <div class="img-overlay">Read more</div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="project7Modal" tabindex="-1" role="dialog" aria-labelledby="project7ModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="project7ModalLabel">Print Product - Infographic</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      For this project, I developed an educational poster exploring the French Renaissance Antiqua typeface class, a foundational typographic style originating during the Renaissance era (1400–1600). The objective was to design a visually engaging and informative piece that highlights the historical evolution, distinguishing features, and notable examples of this typeface class.
-                    <br><br>
-                    <strong>Design Approach:</strong> 
-                    <br>
-                    <ul>
-                      <li>The poster utilized a structured grid layout to organize detailed content, including the typeface’s etymology, historical significance, and visual characteristics.</li>
-                      <li>A sophisticated color palette with subtle contrasts ensured readability and aesthetic harmony.</li>
-                      <li>Iconographic representations and carefully selected examples, such as Bembo and Garamond, provided visual references for the typeface’s unique qualities.</li>
-                    </ul>
-                    <br>
-                    <strong>Content Highlights:</strong>
-                    <br>
-                    <ul>
-                      <li>Explored the Renaissance cultural movement's influence on typography, emphasizing Aldus Manutius' pivotal contributions.</li>
-                      <li>Detailed the hallmark features of French Renaissance Antiqua, such as slanted roof strokes in minuscules, rounded serif transitions, and an emphasized contrast in stroke weight.</li>
-                      <li>Included an annotated visual breakdown of key letterforms to guide recognition of this typeface style.</li>
-                    </ul>
-                    <br>
-                    <br>
-                    <strong>Key Challenges and Solutions:</strong>
-                    <br>
-                    <ul>
-                      <li>Synthesizing complex historical and technical information into an accessible format required careful content prioritization and clarity.</li>
-                      <li>Balancing educational depth with visual appeal was achieved through typographic hierarchy and strategically placed imagery.</li>
-                    </ul>
-                    <br>
-                    <strong>Skills:</strong> Typography, visual communication, information design, layout composition, and historical research.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
+            <h5 class="bildunterschrift">Waldtriathlon Microsite</h5>
+            <p>
+              <strong>Skills:</strong> Adobe Illustrator, Photoshop, Adobe XD,
+              Bootstrap, HTML5, CSS3, JavaScript, responsive design principles
+              and UX/UI best practices.
+            </p>
+            <br />
+            <button type="button" class="btn btn-secondary btn-website">
+              <a
+                href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Waldtriathlon/Waldtrithlon/"
+                target="_blank"
+                >Go to Website</a
+              >
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project3Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project3ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project3ModalLabel">
+                    Waldtriathlon Microsite
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Developed a visually engaging and intuitive microsite for the
+                  Waldtriathlon event, designed to encapsulate the energy,
+                  emotion, and atmosphere of the triathlon while ensuring
+                  user-friendliness and ease of navigation.
+                  <br /><br />
+                  <strong>Design Approach:</strong> Adopted a clear and
+                  user-focused layout emphasizing whitespace to provide a
+                  breathable, modern aesthetic. Visual separation of the
+                  triathlon's three disciplines—cycling, running, and
+                  swimming—was achieved through distinct sections and imagery.
+                  <br /><br />
+                  <strong>Typography and Color Scheme:</strong> Utilized "Roboto
+                  Condensed" for headings to convey modernity and dynamism,
+                  complemented by "Lato" for body text for readability. The
+                  color palette balanced calming dark blue with energetic
+                  accents of mahogany orange, scarlet red, and green for route
+                  differentiation. <br /><br />
+                  <strong>Interactive Features:</strong> Implemented a custom
+                  slider showcasing images of triathlon moments, allowing users
+                  to explore the event's highlights dynamically. A parallax
+                  effect was added to enhance the immersive experience, paired
+                  with an intuitive "back-to-top" button for seamless
+                  navigation. <br /><br />
+                  <strong>Icons & Graphics:</strong> Created bespoke icons
+                  inspired by Flaticon and Adobe Stock to represent the
+                  triathlon disciplines and map routes, ensuring consistency and
+                  clarity. Icons featured elegant lines and dynamic shapes to
+                  evoke movement and agility. <br /><br />
+                  <strong>Responsiveness:</strong> Optimized for desktop and
+                  mobile devices with responsive typography, adaptable layouts,
+                  and interactive maps for each route, ensuring a cohesive user
+                  experience across all viewports. <br /><br />
+                  <strong>Skills:</strong> Adobe Illustrator, Photoshop, Adobe
+                  XD, Bootstrap, HTML5, CSS3, JavaScript, responsive design
+                  principles and UX/UI best practices.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-website">
+                    <a
+                      href="https://hoz7xnu6fzzg0gzckvo5fw.on.drv.tw/Waldtriathlon/Waldtrithlon/"
+                      target="_blank"
+                      >Go to Website</a
+                    >
+                  </button>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-6 pt-5 description">
-                <img src="img/cafe-flyer.jpg" alt="Wellen" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project8Modal">
-                <h5 class="bildunterschrift">Café Kiebitz Menu Redesign</h5>
-                <p><strong>Skills:</strong> Branding, layout design, visual hierarchy, typography, iconography, user experience design, InDesign, Illustrator and eco-conscious messaging.</p>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="project8Modal" tabindex="-1" role="dialog" aria-labelledby="project8ModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="project8ModalLabel">Print Product - Menu Redesign</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      Developed a comprehensive menu redesign for Café Kiebitz, a cozy and eco-conscious café committed to sustainability, regionality, and a welcoming atmosphere. The project involved creating a cohesive visual identity that reflects the café’s values while ensuring an optimal user experience for customers.
-                    <br><br>
-                    <strong>Design Concept and Approach:</strong> 
-                    <br>
-                    <ul>
-                      <li><strong>Brand Integration:</strong> Built the menu around Café Kiebitz’s brand essence, emphasizing sustainability and warmth. Green, earthy tones and wooden textures were chosen to evoke nature and comfort, aligning with the café’s eco-friendly ethos.</li>
-                      <li><strong>Moodboard Creation:</strong> Developed a detailed moodboard to guide the aesthetic direction, featuring natural elements such as leaves, warm wood tones, and minimalistic design inspiration.</li>
-                      <li><strong>Typography:</strong> Carefully selected typefaces combining elegance and readability. Headlines utilized a classic serif font to convey tradition, while body text used a clean sans-serif font to ensure clarity and modernity.</li>
-                    </ul>
-                    <br>
-                    <strong>Menu Content and Layout:</strong>
-                    <br>
-                    <ul>
-                      <li><strong>Structure:</strong> Organized menu content into clear sections: breakfast options, regional specialties, beverages, and desserts. Each section was designed for easy navigation and quick readability, even during busy café hours.</li>
-                      <li><strong>Icons and Highlights:</strong> Designed custom icons to represent regional ingredients.</li>
-                      <li><strong>Eco-Friendly Focus:</strong> Included information about the café’s use of locally sourced ingredients and sustainable practices, subtly reinforcing the brand’s commitment to the environment.</li>
-                      <li><strong>Callouts:</strong> Highlighted customer favorites and seasonal specials with visual accents to guide attention naturally.</li>
-                    </ul>
-                    <br>
-                    <strong>Visual Elements:</strong>
-                    <br>
-                    <ul>
-                      <li><strong>Mockups and Prototypes:</strong> Created high-quality mockups to visualize the menu’s appearance on tables and within the café’s environment, ensuring alignment with the interior decor.</li>
-                      <li><strong>Illustrations:</strong> Designed minimal yet expressive plant-based motifs to connect the menu visually to the café's natural and regional focus.</li>
-                      <li><strong>Consistency:</strong> Ensured that colors, fonts, and layouts seamlessly matched the café’s existing branding, enhancing recognition and coherence.</li>
-                    </ul>
-                    <br>
-                    <strong>Challenges and Solutions:</strong>
-                    <br>
-                    <ul>
-                      <li><strong>Balancing Information and Aesthetics:</strong> Worked to fit substantial menu content into a clean, readable design without overwhelming the viewer. Achieved this by prioritizing visual hierarchy and utilizing white space effectively.</li>
-                      <li><strong>Reflecting Sustainability:</strong> Incorporated subtle but effective design cues (e.g., paper texture simulation in the layout) to represent the café’s eco-friendly messaging.</li>
-                      <li><strong>Customer Feedback:</strong> Ensured that colors, fonts, and layouts seamlessly matched the café’s existing branding, enhancing recognition and coherence.</li>
-                    </ul>
-                    <br><br>
-                    <strong>Outcome:</strong> Delivered a modern, sustainable, and customer-friendly menu design that strengthens Café Kiebitz’s brand identity. The final product not only meets the café’s operational needs but also enhances the customer experience by conveying a sense of comfort, authenticity, and care for the environment.
-                    <br><br>
-                    <strong>Skills:</strong> Branding, layout design, visual hierarchy, typography, iconography, user experience design, and eco-conscious messaging.
-                  </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project4Modal">
+              <img
+                src="img/sauerland.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project4Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">Ballonteam Sauerland Website</h5>
+            <p>
+              <strong>Skills:</strong> HTML5, CSS3, JavaScript, responsive web
+              design, Illustrator, Photoshop, Adobe XD, UI/UX principles and
+              client-oriented content structuring.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project4Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project4ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project4ModalLabel">
+                    Ballonteam Sauerland Website
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Designed and developed a visually engaging and informative
+                  microsite for Ballonteam Sauerland, a company specializing in
+                  unique hot air balloon experiences. The project aimed to
+                  captivate adventurous customers and provide clear, concise
+                  information about services, packages, and scheduling options.
+                  <br /><br />
+                  <strong>Design Approach:</strong> The layout incorporated
+                  vibrant imagery and a clean, spacious design to evoke the
+                  exhilaration and serenity of hot air balloon rides. Emphasis
+                  was placed on user-centric navigation and accessibility to
+                  ensure a seamless browsing experience. <br /><br />
+                  <strong>Typography:</strong> Utilized a modern sans-serif font
+                  for body text to ensure readability and paired it with bold
+                  headings to highlight key sections and draw attention to
+                  calls-to-action. <br /><br />
+                  <strong>Functionality:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Structured the site as a one-pager, simplifying navigation
+                      and maintaining a user-friendly experience.
+                    </li>
+                    <li>
+                      Developed interactive booking forms with integrated fields
+                      for user details, preferred dates, and custom notes.
+                    </li>
+                    <li>
+                      Included a dynamic section for package highlights,
+                      providing clear pricing and service descriptions.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Responsiveness:</strong> Ensured compatibility across
+                  devices by creating separate designs for desktop, tablet, and
+                  mobile, prioritizing usability and visual harmony. Optimized
+                  image scaling and button placement for smaller screens.
+                  <br /><br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Conveying Adventure and Elegance:</strong>
+                      Balanced a professional aesthetic with elements of
+                      excitement through the strategic use of images and color
+                      schemes.
+                    </li>
+                    <li>
+                      <strong>Encouraging User Interaction:</strong>Designed
+                      engaging call-to-action buttons and intuitive forms to
+                      enhance user engagement and facilitate booking.
+                    </li>
+                    <li>
+                      <strong>Multi-Device Optimization:</strong>Addressed
+                      unique layout challenges for smaller devices using
+                      adaptive design techniques, ensuring consistent quality
+                      across all platforms.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> HTML5, CSS3, JavaScript, responsive
+                  web design, UI/UX principles and client-oriented content
+                  structuring.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
-         </div>
             </div>
+          </div>
         </div>
-                
-        <!-- Portfolio2-Weiterbildung -->
-        <div class="bg-light" id="portfolio2">
-            <div class="container" id="portfolio2">
-                <h2 id="portfolio-ausbildung"><strong>Advanced UX/UI design training (Weiterbildung als UX/UI Designer)</strong></h2>
-                <div class="row pb-5">
-                    <div class="col-sm-6 col-md-6 pt-5 description2">
-                        <img src="img/weiterb_website.jpg" alt="Winter" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project9Modal">
-                        <h5 class="bildunterschrift2">"Die Blauen Reiter" Website</h5>
-                        <p><strong>Skills:</strong> HTML5, CSS3 and JavaScript for interactive elements. Effective application of UI/UX design strategies to maintain usability and visual harmony.</p>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project9Modal" tabindex="-1" role="dialog" aria-labelledby="project9ModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="project9ModalLabel">Dummy Website</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            For the website of the artistic collective Die Blauen Reiter, the aim was to create a digital representation of their mission, works, and vibrant community. The project highlights a fusion of design precision and artistic sensibility, utilizing responsive layouts and thoughtful content structuring.
-                          <br><br>
-                          <strong>Design Concept:</strong> 
-                          <br>
-                          <ul>
-                            <li>The website employs a clean, pastel color palette to symbolize order and serenity, contrasting with the dramatic and energetic nature of expressionist artworks.</li>
-                            <li>A white background was chosen to emphasize the brilliance and details of the featured artworks without overwhelming the viewer's focus.</li>
-                            <li>A bold but structured typographic hierarchy balances the aesthetic appeal and readability, with "Uncial Antigua" used for branding and "Poppins" for the navigation menu.</li>
-                          </ul>
-                          <br>
-                          <strong>Key Features:</strong>
-                          <br>
-                          <ul>
-                            <li><strong>Landing Page:</strong> Introduces the collective with a brief history, mission statement, and portraits of its members. Includes a user-friendly navigation menu leading to other sections.</li>
-                            <li><strong>Exhibitions and Collection:</strong> Showcases current and upcoming exhibitions with engaging descriptions and images. Provides a curated view of expressionist works, segmented into German Expressionism, Neo-Expressionism, and Abstract Expressionism.</li>
-                            <li><strong>Gallery:</strong> Features an animated gallery and video integrations to offer an immersive experience. </li>
-                            <li><strong>Events:</strong> Highlights workshops, performances, and other cultural events with essential details like dates and times.</li>
-                            <li><strong>Library and Café:</strong> Promotes the collective’s extensive art library, allowing users to browse book excerpts virtually. Advertises the café as a tranquil space for visitors to reflect on the artwork while enjoying coffee and desserts.</li>   
-                            <li><strong>Contact and Accessibility:</strong> Includes a contact form with required fields for name, phone number, email, and message, ensuring streamlined communication. Integrates Google Maps for directions and accessibility.</li>   
-                          
-                          </ul>
-                          <br>
-                          <strong>Technical Execution:</strong>
-                          <br>
-                          <ul>
-                            <li><strong>Responsive Design:</strong> Adapted for seamless usability across desktops, tablets, and mobile devices.</li>
-                            <li><strong>Semantic HTML and Accessibility:</strong> Designed with accessibility standards in mind to ensure inclusivity.</li>
-                            <li><strong>Clean Code and Comments:</strong> The codebase adheres to structured formatting and clear commentary for ease of maintenance.</li>
-                          </ul>
-                          <br><br>
-                          <strong>Skills:</strong> HTML5, CSS3, and JavaScript for interactive elements. Effective application of UI/UX design strategies to maintain usability and visual harmony.
-                        </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 pt-5 description2">
-                        <img src="img/weiteb_app.jpg" alt="Winter" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project10Modal">
-                        <h5 class="bildunterschrift2">BeeAware App</h5>
-                        <p><strong>Skills:</strong> User research, persona creation, empathy mapping, customer journey mapping, low- and high-fidelity wireframing, interactive prototyping, mockup design, and user-centered UI/UX design principles.</p>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project10Modal" tabindex="-1" role="dialog" aria-labelledby="project10ModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="project10ModalLabel">Dummy Application</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            The BeeAware app was conceptualized and designed as a comprehensive tool to raise awareness about pollinator conservation and empower users to take actionable steps towards sustainable ecological practices. With an engaging and user-centered approach, the app targets diverse audiences, including families, eco-conscious individuals, and community gardeners.
-                          <br><br>
-                          <strong>UX Design Process:</strong> 
-                          <br>
-                          <ul>
-                            <li><strong>User Research:</strong>Conducted detailed surveys and interviews to identify target users and their specific needs, resulting in the creation of three primary personas:</li>
-                            <ul>
-                              <li>A child passionate about nature and eager to learn through interactive games.</li>
-                              <li>A home gardener seeking practical tips to make their garden pollinator-friendly.</li>
-                              <li>A sustainability enthusiast interested in recipes, natural remedies, and broader ecological issues.</li>
-                            </ul>
-                            <li><strong>Empathy Mapping:</strong> Mapped users’ emotions, thoughts, and challenges to gain a deeper understanding of their motivations and pain points. These insights directly influenced the app’s key features and content structure.</li>
-                            <li><strong>Customer Journey Mapping:</strong> Developed detailed journey maps to visualize how users would interact with the app across different touchpoints, ensuring a seamless and engaging experience from onboarding to content exploration.</li>
-                          </ul>
-                          <br>
-                          <strong>UI Design Process:</strong>
-                          <br>
-                          <ul>
-                            <li><strong>Wireframes:</strong></li>
-                            <ul>
-                              <li><strong>Low-Fidelity Wireframes:</strong> Focused on layout, structure, and navigation flow to test early usability concepts.</li>
-                              <li><strong>High-Fidelity Wireframes:</strong> Added detailed visual elements, typography, and initial color schemes to validate the app's aesthetic and functional direction.</li>
-                            </ul>
-                            <li><strong>Mockups:</strong> Designed polished mockups showcasing the app's vibrant, eco-inspired color palette and clean, modern interface to reflect the theme of nature and sustainability.</li>
-                            <li><strong>Clickdummy Prototype:</strong> Created an interactive prototype to demonstrate user flows, including gamified activities, recipe-sharing features, and pollinator-friendly gardening tips. This prototype was essential for gathering feedback during usability testing.</li>
-                          </ul>
-                          <br>
-                          <strong>Features and Highlights:</strong>
-                          <br>
-                          <ul>
-                            <li><strong>Educational Content:</strong> An extensive library of resources about pollinators, their ecological importance, and actionable tips for their preservation.</li>
-                            <li><strong>Gamified Learning:</strong> Interactive modules designed to educate children in a fun and engaging way.</li>
-                            <li><strong>Community Features:</strong> Options to share gardening experiences, ecological activities, and sustainable practices with like-minded users.</li>
-                            <li><strong>Accessibility:</strong> Design adheres to WCAG guidelines, ensuring inclusivity with clear typography, high contrast, and simple navigation.</li>
-                          </ul>
-                          <br>
-                          <strong>Challenges and Solutions:</strong>
-                          <br>
-                          <ul>
-                            <li><strong>Diverse User Needs:</strong> Balanced the needs of varied user groups by providing tailored features for children, adults, and community users.</li>
-                            <li><strong>Complex Information Simplification:</strong> Transformed scientific data into easy-to-understand infographics and bite-sized content to maintain user engagement.</li>
-                            <li><strong>Iterative Design Improvements:</strong> Addressed feedback from usability testing to refine navigation, enhance feature clarity, and streamline workflows.</li>
-                          </ul>
-                          <br><br>
-                          <strong>Skills:</strong> User research, persona creation, empathy mapping, customer journey mapping, low- and high-fidelity wireframing, interactive prototyping, mockup design, and user-centered UI/UX design principles.
-                        </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 pt-5 description2">
-                        <img src="img/weiteb_grafik.jpg" alt="Wald" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#project11Modal">
-                        <h5 class="bildunterschrift2">African Masks Poster Design</h5>
-                        <p><strong>Skills:</strong> Adobe Illustrator, vector design, layout optimization, typography, cultural research, and visual storytelling.</p>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="project11Modal" tabindex="-1" role="dialog" aria-labelledby="project11ModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="project11ModalLabel">African Masks Poster Design</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            To explore the artistic and cultural significance of African masks, I developed a detailed and visually engaging poster entirely in Adobe Illustrator. This project focused on communicating the history, symbolism, and diverse forms of masks from various African tribes.
-                          <br><br>
-                          <strong>Design Approach:</strong>  The poster utilizes a structured layout that balances text and visuals, ensuring both aesthetic appeal and readability. By leveraging vector graphics, I depicted distinct features of masks, integrating intricate details and traditional patterns to evoke authenticity.
-                          <br><br>
-                          <strong>Color Palette and Typography:</strong> The design employs a harmonious color scheme inspired by earthy and vibrant tones traditionally associated with African art. A combination of bold and elegant typefaces was selected to contrast headings and descriptive content effectively.
-                          <br>
-                          <strong>Challenges and Solutions:</strong>
-                            <ul>
-                              <li>Created accurate representations of mask designs by conducting extensive research and leveraging Illustrator's advanced drawing tools.</li>
-                              <li>Managed content density by strategically organizing information in sections, ensuring clarity without overwhelming the viewer.</li>
-                              <li>Maintained cultural sensitivity and respect for the subject matter through precise illustration and thoughtful presentation.</li>
-                            </ul>
-                          <br>
-                          <strong>Skills:</strong> Adobe Illustrator, vector design, layout optimization, typography, cultural research, and visual storytelling.
-                        </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>  
+        <div class="row pb-5">
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project5Modal">
+              <img
+                src="img/Confetti.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project5Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">
+              Confetti’s 50th Anniversary Landingpage
+            </h5>
+            <p>
+              <strong>Skills:</strong> HTML5, CSS3, responsive design,
+              Illustrator, Photoshop, Adobe XD, UI/UX principles, brand
+              alignment and form development.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project5Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project5ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project5ModalLabel">
+                    Confetti’s 50th Anniversary Landingpage
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-               
+                <div class="modal-body">
+                  Celebrating the legacy of Confetti’s 50th anniversary, this
+                  landingpage was designed to capture the elegance and heritage
+                  of the brand while providing a streamlined user experience for
+                  event registration.
+                  <br /><br />
+                  <strong>Design Approach:</strong> The design adhered to strict
+                  branding guidelines, utilizing the company’s logo colors
+                  exclusively to ensure consistency and recognition. All imagery
+                  was converted to black and white, emphasizing a classic and
+                  timeless aesthetic while allowing the content to stand out.
+                  <br /><br />
+                  <strong>Layout & Features:</strong> The single-page layout was
+                  meticulously planned to balance visual appeal and
+                  functionality. Key sections included a detailed event overview
+                  and an intuitive, responsive registration form. <br /><br />
+                  <strong>Typography:</strong> Carefully selected fonts conveyed
+                  professionalism and celebration, complementing the clean
+                  design. <br /><br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Branding Constraints:</strong> Successfully
+                      incorporated limited color options and monochrome imagery
+                      without compromising visual interest or clarity.
+                    </li>
+                    <li>
+                      <strong>Engagement:</strong> Developed a user-friendly
+                      form to maximize registrations while ensuring data
+                      validation and security.
+                    </li>
+                    <li>
+                      <strong>Multi-Device Optimization:</strong> Addressed
+                      unique layout challenges for smaller devices using
+                      adaptive design techniques, ensuring consistent quality
+                      across all platforms.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> HTML5, CSS3, responsive design,
+                  Illustrator, Photoshop, Adobe XD, UI/UX principles, brand
+                  alignment and form development.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project6Modal">
+              <img
+                src="img/yoga-flyer.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project6Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">Yoga Flyer Redesign</h5>
+            <p>
+              <strong>Skills:</strong> Illustrator, InDesign, typography (micro
+              and macro), colour theory and use of white space.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project6Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project6ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project6ModalLabel">
+                    Print Product - Redesign
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  For this project, the objective was to redesign a newspaper
+                  flyer for a yoga studio, adhering to specific typographic and
+                  layout guidelines. The task emphasized improving
+                  microtypography and visual hierarchy while maintaining the
+                  original dimensions of 136 mm x 100 mm, adaptable to either
+                  portrait or landscape format.
+                  <br /><br />
+                  <strong>Design Approach:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Logo Recreation and Enhancement:</strong> The yoga
+                      studio's logo was meticulously recreated with minor
+                      refinements to improve visual appeal and ensure better
+                      integration within the flyer layout.
+                    </li>
+                    <li>
+                      <strong>Typography and Microtypography:</strong> Focused
+                      on optimizing font sizes, spacing, and alignment for
+                      enhanced readability. Hierarchical text elements were
+                      established to guide the reader’s eye through the key
+                      information, such as free trial sessions and the yoga
+                      class schedule.
+                    </li>
+                    <li>
+                      <strong>Visual Enhancements:</strong> Selected calming and
+                      professional imagery to complement the yoga theme,
+                      aligning with the flyer’s overall aesthetic and improving
+                      its appeal to potential participants.
+                    </li>
+                    <li>
+                      <strong>Color Palette:</strong> Opted for a balanced and
+                      soothing color scheme that resonates with the themes of
+                      relaxation and well-being associated with yoga.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Constraints and Challenges:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      The flyer had to be designed for newspaper print in CMYK
+                      mode, requiring careful attention to color contrast and
+                      legibility.
+                    </li>
+                    <li>
+                      The layout had to balance textual content and visual
+                      elements within the constrained dimensions, ensuring an
+                      uncluttered, professional appearance.
+                    </li>
+                    <li>
+                      Achieving a consistent and harmonious design while
+                      adhering to the provided manuscript text was essential.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Outcome:</strong> The redesigned flyer achieved a
+                  clean, professional look that effectively communicates the
+                  studio’s offerings while being visually appealing to the
+                  target audience. Key information, such as the schedule and
+                  contact details, was highlighted through strategic use of
+                  typography and layout. The result was a functional and
+                  aesthetic flyer ready for newspaper publication.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    
+        <div class="row pb-5">
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project7Modal">
+              <img
+                src="img/plakat.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project7Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">
+              French Renaissance Antiqua Typography Poster
+            </h5>
+            <p>
+              <strong>Skills:</strong> Typography, visual communication,
+              information design, layout composition and historical research.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project7Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project7ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project7ModalLabel">
+                    Print Product - Infographic
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  For this project, I developed an educational poster exploring
+                  the French Renaissance Antiqua typeface class, a foundational
+                  typographic style originating during the Renaissance era
+                  (1400–1600). The objective was to design a visually engaging
+                  and informative piece that highlights the historical
+                  evolution, distinguishing features, and notable examples of
+                  this typeface class.
+                  <br /><br />
+                  <strong>Design Approach:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      The poster utilized a structured grid layout to organize
+                      detailed content, including the typeface’s etymology,
+                      historical significance, and visual characteristics.
+                    </li>
+                    <li>
+                      A sophisticated color palette with subtle contrasts
+                      ensured readability and aesthetic harmony.
+                    </li>
+                    <li>
+                      Iconographic representations and carefully selected
+                      examples, such as Bembo and Garamond, provided visual
+                      references for the typeface’s unique qualities.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Content Highlights:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Explored the Renaissance cultural movement's influence on
+                      typography, emphasizing Aldus Manutius' pivotal
+                      contributions.
+                    </li>
+                    <li>
+                      Detailed the hallmark features of French Renaissance
+                      Antiqua, such as slanted roof strokes in minuscules,
+                      rounded serif transitions, and an emphasized contrast in
+                      stroke weight.
+                    </li>
+                    <li>
+                      Included an annotated visual breakdown of key letterforms
+                      to guide recognition of this typeface style.
+                    </li>
+                  </ul>
+                  <br />
+                  <br />
+                  <strong>Key Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      Synthesizing complex historical and technical information
+                      into an accessible format required careful content
+                      prioritization and clarity.
+                    </li>
+                    <li>
+                      Balancing educational depth with visual appeal was
+                      achieved through typographic hierarchy and strategically
+                      placed imagery.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> Typography, visual communication,
+                  information design, layout composition, and historical
+                  research.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description">
+            <div class="img-overlay-container" data-target="#project8Modal">
+              <img
+                src="img/cafe-flyer.jpg"
+                alt="Wellen"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project8Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift">Café Kiebitz Menu Redesign</h5>
+            <p>
+              <strong>Skills:</strong> Branding, layout design, visual
+              hierarchy, typography, iconography, user experience design,
+              InDesign, Illustrator and eco-conscious messaging.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project8Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project8ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project8ModalLabel">
+                    Print Product - Menu Redesign
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Developed a comprehensive menu redesign for Café Kiebitz, a
+                  cozy and eco-conscious café committed to sustainability,
+                  regionality, and a welcoming atmosphere. The project involved
+                  creating a cohesive visual identity that reflects the café’s
+                  values while ensuring an optimal user experience for
+                  customers.
+                  <br /><br />
+                  <strong>Design Concept and Approach:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Brand Integration:</strong> Built the menu around
+                      Café Kiebitz’s brand essence, emphasizing sustainability
+                      and warmth. Green, earthy tones and wooden textures were
+                      chosen to evoke nature and comfort, aligning with the
+                      café’s eco-friendly ethos.
+                    </li>
+                    <li>
+                      <strong>Moodboard Creation:</strong> Developed a detailed
+                      moodboard to guide the aesthetic direction, featuring
+                      natural elements such as leaves, warm wood tones, and
+                      minimalistic design inspiration.
+                    </li>
+                    <li>
+                      <strong>Typography:</strong> Carefully selected typefaces
+                      combining elegance and readability. Headlines utilized a
+                      classic serif font to convey tradition, while body text
+                      used a clean sans-serif font to ensure clarity and
+                      modernity.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Menu Content and Layout:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Structure:</strong> Organized menu content into
+                      clear sections: breakfast options, regional specialties,
+                      beverages, and desserts. Each section was designed for
+                      easy navigation and quick readability, even during busy
+                      café hours.
+                    </li>
+                    <li>
+                      <strong>Icons and Highlights:</strong> Designed custom
+                      icons to represent regional ingredients.
+                    </li>
+                    <li>
+                      <strong>Eco-Friendly Focus:</strong> Included information
+                      about the café’s use of locally sourced ingredients and
+                      sustainable practices, subtly reinforcing the brand’s
+                      commitment to the environment.
+                    </li>
+                    <li>
+                      <strong>Callouts:</strong> Highlighted customer favorites
+                      and seasonal specials with visual accents to guide
+                      attention naturally.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Visual Elements:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Mockups and Prototypes:</strong> Created
+                      high-quality mockups to visualize the menu’s appearance on
+                      tables and within the café’s environment, ensuring
+                      alignment with the interior decor.
+                    </li>
+                    <li>
+                      <strong>Illustrations:</strong> Designed minimal yet
+                      expressive plant-based motifs to connect the menu visually
+                      to the café's natural and regional focus.
+                    </li>
+                    <li>
+                      <strong>Consistency:</strong> Ensured that colors, fonts,
+                      and layouts seamlessly matched the café’s existing
+                      branding, enhancing recognition and coherence.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Balancing Information and Aesthetics:</strong>
+                      Worked to fit substantial menu content into a clean,
+                      readable design without overwhelming the viewer. Achieved
+                      this by prioritizing visual hierarchy and utilizing white
+                      space effectively.
+                    </li>
+                    <li>
+                      <strong>Reflecting Sustainability:</strong> Incorporated
+                      subtle but effective design cues (e.g., paper texture
+                      simulation in the layout) to represent the café’s
+                      eco-friendly messaging.
+                    </li>
+                    <li>
+                      <strong>Customer Feedback:</strong> Ensured that colors,
+                      fonts, and layouts seamlessly matched the café’s existing
+                      branding, enhancing recognition and coherence.
+                    </li>
+                  </ul>
+                  <br /><br />
+                  <strong>Outcome:</strong> Delivered a modern, sustainable, and
+                  customer-friendly menu design that strengthens Café Kiebitz’s
+                  brand identity. The final product not only meets the café’s
+                  operational needs but also enhances the customer experience by
+                  conveying a sense of comfort, authenticity, and care for the
+                  environment. <br /><br />
+                  <strong>Skills:</strong> Branding, layout design, visual
+                  hierarchy, typography, iconography, user experience design,
+                  and eco-conscious messaging.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio2-Weiterbildung -->
+    <div class="bg-light" id="portfolio2">
+      <div class="container" id="portfolio2">
+        <h2 id="portfolio-ausbildung">
+          <strong
+            >Advanced UX/UI design training (Weiterbildung als UX/UI
+            Designer)</strong
+          >
+        </h2>
+        <div class="row pb-5">
+          <div class="col-sm-6 col-md-6 pt-5 description2">
+            <div class="img-overlay-container" data-target="#project9Modal">
+              <img
+                src="img/weiterb_website.jpg"
+                alt="Winter"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project9Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift2">"Die Blauen Reiter" Website</h5>
+            <p>
+              <strong>Skills:</strong> HTML5, CSS3 and JavaScript for
+              interactive elements. Effective application of UI/UX design
+              strategies to maintain usability and visual harmony.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project9Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project9ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project9ModalLabel">
+                    Dummy Website
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  For the website of the artistic collective Die Blauen Reiter,
+                  the aim was to create a digital representation of their
+                  mission, works, and vibrant community. The project highlights
+                  a fusion of design precision and artistic sensibility,
+                  utilizing responsive layouts and thoughtful content
+                  structuring.
+                  <br /><br />
+                  <strong>Design Concept:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      The website employs a clean, pastel color palette to
+                      symbolize order and serenity, contrasting with the
+                      dramatic and energetic nature of expressionist artworks.
+                    </li>
+                    <li>
+                      A white background was chosen to emphasize the brilliance
+                      and details of the featured artworks without overwhelming
+                      the viewer's focus.
+                    </li>
+                    <li>
+                      A bold but structured typographic hierarchy balances the
+                      aesthetic appeal and readability, with "Uncial Antigua"
+                      used for branding and "Poppins" for the navigation menu.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Key Features:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Landing Page:</strong> Introduces the collective
+                      with a brief history, mission statement, and portraits of
+                      its members. Includes a user-friendly navigation menu
+                      leading to other sections.
+                    </li>
+                    <li>
+                      <strong>Exhibitions and Collection:</strong> Showcases
+                      current and upcoming exhibitions with engaging
+                      descriptions and images. Provides a curated view of
+                      expressionist works, segmented into German Expressionism,
+                      Neo-Expressionism, and Abstract Expressionism.
+                    </li>
+                    <li>
+                      <strong>Gallery:</strong> Features an animated gallery and
+                      video integrations to offer an immersive experience.
+                    </li>
+                    <li>
+                      <strong>Events:</strong> Highlights workshops,
+                      performances, and other cultural events with essential
+                      details like dates and times.
+                    </li>
+                    <li>
+                      <strong>Library and Café:</strong> Promotes the
+                      collective’s extensive art library, allowing users to
+                      browse book excerpts virtually. Advertises the café as a
+                      tranquil space for visitors to reflect on the artwork
+                      while enjoying coffee and desserts.
+                    </li>
+                    <li>
+                      <strong>Contact and Accessibility:</strong> Includes a
+                      contact form with required fields for name, phone number,
+                      email, and message, ensuring streamlined communication.
+                      Integrates Google Maps for directions and accessibility.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Technical Execution:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Responsive Design:</strong> Adapted for seamless
+                      usability across desktops, tablets, and mobile devices.
+                    </li>
+                    <li>
+                      <strong>Semantic HTML and Accessibility:</strong> Designed
+                      with accessibility standards in mind to ensure
+                      inclusivity.
+                    </li>
+                    <li>
+                      <strong>Clean Code and Comments:</strong> The codebase
+                      adheres to structured formatting and clear commentary for
+                      ease of maintenance.
+                    </li>
+                  </ul>
+                  <br /><br />
+                  <strong>Skills:</strong> HTML5, CSS3, and JavaScript for
+                  interactive elements. Effective application of UI/UX design
+                  strategies to maintain usability and visual harmony.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description2">
+            <div class="img-overlay-container" data-target="#project10Modal">
+              <img
+                src="img/weiteb_app.jpg"
+                alt="Winter"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project10Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift2">BeeAware App</h5>
+            <p>
+              <strong>Skills:</strong> User research, persona creation, empathy
+              mapping, customer journey mapping, low- and high-fidelity
+              wireframing, interactive prototyping, mockup design, and
+              user-centered UI/UX design principles.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project10Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project10ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project10ModalLabel">
+                    Dummy Application
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  The BeeAware app was conceptualized and designed as a
+                  comprehensive tool to raise awareness about pollinator
+                  conservation and empower users to take actionable steps
+                  towards sustainable ecological practices. With an engaging and
+                  user-centered approach, the app targets diverse audiences,
+                  including families, eco-conscious individuals, and community
+                  gardeners.
+                  <br /><br />
+                  <strong>UX Design Process:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>User Research:</strong>Conducted detailed surveys
+                      and interviews to identify target users and their specific
+                      needs, resulting in the creation of three primary
+                      personas:
+                    </li>
+                    <ul>
+                      <li>
+                        A child passionate about nature and eager to learn
+                        through interactive games.
+                      </li>
+                      <li>
+                        A home gardener seeking practical tips to make their
+                        garden pollinator-friendly.
+                      </li>
+                      <li>
+                        A sustainability enthusiast interested in recipes,
+                        natural remedies, and broader ecological issues.
+                      </li>
+                    </ul>
+                    <li>
+                      <strong>Empathy Mapping:</strong> Mapped users’ emotions,
+                      thoughts, and challenges to gain a deeper understanding of
+                      their motivations and pain points. These insights directly
+                      influenced the app’s key features and content structure.
+                    </li>
+                    <li>
+                      <strong>Customer Journey Mapping:</strong> Developed
+                      detailed journey maps to visualize how users would
+                      interact with the app across different touchpoints,
+                      ensuring a seamless and engaging experience from
+                      onboarding to content exploration.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>UI Design Process:</strong>
+                  <br />
+                  <ul>
+                    <li><strong>Wireframes:</strong></li>
+                    <ul>
+                      <li>
+                        <strong>Low-Fidelity Wireframes:</strong> Focused on
+                        layout, structure, and navigation flow to test early
+                        usability concepts.
+                      </li>
+                      <li>
+                        <strong>High-Fidelity Wireframes:</strong> Added
+                        detailed visual elements, typography, and initial color
+                        schemes to validate the app's aesthetic and functional
+                        direction.
+                      </li>
+                    </ul>
+                    <li>
+                      <strong>Mockups:</strong> Designed polished mockups
+                      showcasing the app's vibrant, eco-inspired color palette
+                      and clean, modern interface to reflect the theme of nature
+                      and sustainability.
+                    </li>
+                    <li>
+                      <strong>Clickdummy Prototype:</strong> Created an
+                      interactive prototype to demonstrate user flows, including
+                      gamified activities, recipe-sharing features, and
+                      pollinator-friendly gardening tips. This prototype was
+                      essential for gathering feedback during usability testing.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Features and Highlights:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Educational Content:</strong> An extensive library
+                      of resources about pollinators, their ecological
+                      importance, and actionable tips for their preservation.
+                    </li>
+                    <li>
+                      <strong>Gamified Learning:</strong> Interactive modules
+                      designed to educate children in a fun and engaging way.
+                    </li>
+                    <li>
+                      <strong>Community Features:</strong> Options to share
+                      gardening experiences, ecological activities, and
+                      sustainable practices with like-minded users.
+                    </li>
+                    <li>
+                      <strong>Accessibility:</strong> Design adheres to WCAG
+                      guidelines, ensuring inclusivity with clear typography,
+                      high contrast, and simple navigation.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Challenges and Solutions:</strong>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Diverse User Needs:</strong> Balanced the needs of
+                      varied user groups by providing tailored features for
+                      children, adults, and community users.
+                    </li>
+                    <li>
+                      <strong>Complex Information Simplification:</strong>
+                      Transformed scientific data into easy-to-understand
+                      infographics and bite-sized content to maintain user
+                      engagement.
+                    </li>
+                    <li>
+                      <strong>Iterative Design Improvements:</strong> Addressed
+                      feedback from usability testing to refine navigation,
+                      enhance feature clarity, and streamline workflows.
+                    </li>
+                  </ul>
+                  <br /><br />
+                  <strong>Skills:</strong> User research, persona creation,
+                  empathy mapping, customer journey mapping, low- and
+                  high-fidelity wireframing, interactive prototyping, mockup
+                  design, and user-centered UI/UX design principles.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 pt-5 description2">
+            <div class="img-overlay-container" data-target="#project11Modal">
+              <img
+                src="img/weiteb_grafik.jpg"
+                alt="Wald"
+                class="img-fluid img-thumbnail"
+                data-toggle="modal"
+                data-target="#project11Modal"
+              />
+              <div class="img-overlay">Read more</div>
+            </div>
+            <h5 class="bildunterschrift2">African Masks Poster Design</h5>
+            <p>
+              <strong>Skills:</strong> Adobe Illustrator, vector design, layout
+              optimization, typography, cultural research, and visual
+              storytelling.
+            </p>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="project11Modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="project11ModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="project11ModalLabel">
+                    African Masks Poster Design
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  To explore the artistic and cultural significance of African
+                  masks, I developed a detailed and visually engaging poster
+                  entirely in Adobe Illustrator. This project focused on
+                  communicating the history, symbolism, and diverse forms of
+                  masks from various African tribes.
+                  <br /><br />
+                  <strong>Design Approach:</strong> The poster utilizes a
+                  structured layout that balances text and visuals, ensuring
+                  both aesthetic appeal and readability. By leveraging vector
+                  graphics, I depicted distinct features of masks, integrating
+                  intricate details and traditional patterns to evoke
+                  authenticity. <br /><br />
+                  <strong>Color Palette and Typography:</strong> The design
+                  employs a harmonious color scheme inspired by earthy and
+                  vibrant tones traditionally associated with African art. A
+                  combination of bold and elegant typefaces was selected to
+                  contrast headings and descriptive content effectively.
+                  <br />
+                  <strong>Challenges and Solutions:</strong>
+                  <ul>
+                    <li>
+                      Created accurate representations of mask designs by
+                      conducting extensive research and leveraging Illustrator's
+                      advanced drawing tools.
+                    </li>
+                    <li>
+                      Managed content density by strategically organizing
+                      information in sections, ensuring clarity without
+                      overwhelming the viewer.
+                    </li>
+                    <li>
+                      Maintained cultural sensitivity and respect for the
+                      subject matter through precise illustration and thoughtful
+                      presentation.
+                    </li>
+                  </ul>
+                  <br />
+                  <strong>Skills:</strong> Adobe Illustrator, vector design,
+                  layout optimization, typography, cultural research, and visual
+                  storytelling.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Kontakt -->
     <div class="bg-light" id="kontakt">
-        <div class="container">
-                                    <!-- Social Media Icons -->
-                                    <div class="container social mt-5">
-                                      <div class="row text-center seitenAbschnitt align-items-center" id="socialMedia">
-                                      <div>
-                                          <a href="https://www.linkedin.com/in/alice-vercelli/"><img class="img-fluid social-icon" src="img/In.png" alt=""></a>
-                                          <p>LinkedIn</p>
-                                      </div>
-                                      </div>
-                                  </div>
-            <div class="row seitenAbschnitt py-5">
-            	<div class="col-sm-4">
-                    <img src="img/profil.png" width="100%">
-                </div>
-                <div class="col-sm-8 mt-5 connect">
-                	<h2><strong>Let's Connect!</strong></h2><br>
-                  <h3>Hi! I'm Alice,</h3>
-                	<p>I look forward to hearing from you!<br>You can reach me directly by phone or email:</p>
-                	<a class="btn-tel btn btn-primary btn-xlg" href="tel:+49-1573-1630-387" style="padding:20px;">+49 1573 1630 387</a>
-		<a class="btn-tel btn btn-primary btn-xlg" href="mailto:alicevercelli13@gmail.com" style="padding:20px;">alicevercelli13@gmail.com</a>
-                </div>
+      <div class="container">
+        <!-- Social Media Icons -->
+        <div class="container social mt-5">
+          <div
+            class="row text-center seitenAbschnitt align-items-center"
+            id="socialMedia"
+          >
+            <div>
+              <a href="https://www.linkedin.com/in/alice-vercelli/"
+                ><img class="img-fluid social-icon" src="img/In.png" alt=""
+              /></a>
+              <p>LinkedIn</p>
             </div>
+          </div>
         </div>
+        <div class="row seitenAbschnitt py-5">
+          <div class="col-sm-4">
+            <img src="img/profil.png" width="100%" />
+          </div>
+          <div class="col-sm-8 mt-5 connect">
+            <h2><strong>Let's Connect!</strong></h2>
+            <br />
+            <h3>Hi! I'm Alice,</h3>
+            <p>
+              I look forward to hearing from you!<br />You can reach me directly
+              by phone or email:
+            </p>
+            <a
+              class="btn-tel btn btn-primary btn-xlg"
+              href="tel:+49-1573-1630-387"
+              style="padding: 20px"
+              >+49 1573 1630 387</a
+            >
+            <a
+              class="btn-tel btn btn-primary btn-xlg"
+              href="mailto:alicevercelli13@gmail.com"
+              style="padding: 20px"
+              >alicevercelli13@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    
+
     <!-- Footer -->
     <div class="bg-dark" id="footer">
-        <div class="container py-5">
-            <div class="row text-white text-center pb-5" id="footer">
-                <div class="col-sm-12">
-                    <p><a href="modalImpressum" class="link-white" data-toggle="modal" data-target="#modalImpressum">Impressum &amp; Privacy Policy</a></p>
-                    <p>&copy; Alice Vercelli 2024</p>
-                    <a href="#topMenu" class="btn btn-outline-light">&uarr;</a>
-                </div>
-            </div>
+      <div class="container py-5">
+        <div class="row text-white text-center pb-5" id="footer">
+          <div class="col-sm-12">
+            <p>
+              <a
+                href="modalImpressum"
+                class="link-white"
+                data-toggle="modal"
+                data-target="#modalImpressum"
+                >Impressum &amp; Privacy Policy</a
+              >
+            </p>
+            <p>&copy; Alice Vercelli 2024</p>
+            <a href="#topMenu" class="btn btn-outline-light">&uarr;</a>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <!-- Modal Impressum -->
-    <div class="modal fade" id="modalImpressum" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modalImpressumLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modalImpressum"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="modalImpressumLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"><strong>Impressum</strong></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <strong>Impressum</strong>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <p><strong>Owner of the Website:</strong></p>
             <p>Alice Vercelli</p>
-            <p>Graphic & Media Designer</p>
+            <p>Graphic Designer, Web Designer & Junior Web Developer</p>
             <p>Aachen, Germany</p>
-            <br>
+            <br />
             <p><strong>Contact Information:</strong></p>
             <p>Email: alicevercelli13@gmail.com</p>
             <p>Phone: +49 1573 1630 387</p>
-            <br>
+            <br />
             <p><strong>Legal Notice:</strong></p>
-            <p>This website is a personal portfolio showcasing the work of Alice Vercelli. It is intended solely for informational purposes and does not engage in any commercial transactions.</p>
-            <br>
-            <p><strong>Responsible for Content according to § 55 Abs. 2 RStV:</strong></p>
+            <p>
+              This website is a personal portfolio showcasing the work of Alice
+              Vercelli. It is intended solely for informational purposes and
+              does not engage in any commercial transactions.
+            </p>
+            <br />
+            <p>
+              <strong
+                >Responsible for Content according to § 55 Abs. 2 RStV:</strong
+              >
+            </p>
             <p>Alice Vercelli</p>
             <p>Email: alicevercelli13@gmail.com</p>
           </div>
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel"><strong>Privacy Policy</strong></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <strong>Privacy Policy</strong>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-            <p>Your privacy is important to me. This website does not collect any personal data, nor does it use cookies or tracking tools such as Google Analytics.</p>
-            <p>If you contact me via the email address or phone number provided, your data will only be used to respond to your query and will not be shared with any third parties.</p>
-            <p>For questions or concerns regarding privacy, you can contact me at:</p>
+            <p>
+              Your privacy is important to me. This website does not collect any
+              personal data, nor does it use cookies or tracking tools such as
+              Google Analytics.
+            </p>
+            <p>
+              If you contact me via the email address or phone number provided,
+              your data will only be used to respond to your query and will not
+              be shared with any third parties.
+            </p>
+            <p>
+              For questions or concerns regarding privacy, you can contact me
+              at:
+            </p>
             <p>Email: alicevercelli13@gmail.com</p>
             <p>Phone: +49 1573 1630 387</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
-    
-   <!-- Optional JavaScript -->
-        <!-- jQuery, Popper.js, Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll(".img-overlay-container")
+          .forEach(function (container) {
+            container.addEventListener("click", function () {
+              const modalId = this.getAttribute("data-target");
+              if (modalId) {
+                $(modalId).modal("show");
+              }
+            });
+          });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".mehr").forEach(function (trigger) {
+          const targetId = trigger.getAttribute("href");
+          const target = document.querySelector(targetId);
+
+          if (target) {
+            trigger.addEventListener("click", function (e) {
+              e.preventDefault();
+              const isShown = target.classList.contains("show");
+
+              if (isShown) {
+                $(target).collapse("hide");
+                trigger.textContent = "Read more...";
+              } else {
+                $(target).collapse("show");
+                trigger.textContent = "Read less...";
+              }
+            });
+
+            $(target).on("hidden.bs.collapse", function () {
+              trigger.textContent = "Read more...";
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
